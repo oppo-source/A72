@@ -1,0 +1,78 @@
+config TOUCHPANEL_MTK_PLATFORM
+	bool "CUSTOM_O platform tp module used"
+	help
+	  Say Y here
+	  if you
+	  have
+	  mtk-platform.
+
+config TOUCHPANEL_LATE_INIT
+	bool "mk6360 pmic init"
+	help
+	  Say Y here
+	  if you
+	  have
+	  mk6360 pmic.
+
+config TOUCHIRQ_UPDATE_QOS
+	bool "CUSTOM_O touchpanel driver update qos"
+	help
+	  Say Y here
+	  if you want to
+	  update qos value
+	  in irq handler.
+
+config TOUCHPANEL_NEW_SET_IRQ_WAKE
+	bool "CUSTOM_O platform tp module used"
+	help
+	  Say Y here
+	  if call enable_irq_wake,
+	  can not call
+	  disable_irq_nosync
+
+config TOUCHPANEL_CUSTOM_O
+	bool "CUSTOM_O tp module"
+	help
+	  Say Y here
+	  if you
+	  have
+	  touchscreen module.
+
+config CUSTOM_O_TP_APK
+	bool "CUSTOM_O apk node create"
+	help
+	  Say Y here
+	  if you
+	  use apk
+	  for TP.
+
+config TOUCHPANEL_MULTI_NOFLASH
+	bool "Multiple noflash TPs using"
+	help
+	  Say Y here
+	  if you have
+	  multiple
+	  noflash touchscreen.
+
+config TOUCHPANEL_NOVA
+	bool "TP Nova_IC enable or not for CUSTOM_O"
+	---help---
+	say Y to enable
+	driver for
+	Touchpanel
+	using NOVATECK_IC
+config TOUCHPANEL_HIMAX
+	bool "TP HIMAX_IC enable or not for CUSTOM_O"
+	---help---
+	say Y to
+	enable driver
+	for Touchpanel
+	using HIMAX_IC
+
+if TOUCHPANEL_NOVA
+source "drivers/input/touchscreen/k6873v1_64_alpha/Novatek/Kconfig"
+endif
+
+if TOUCHPANEL_HIMAX
+source "drivers/input/touchscreen/k6873v1_64_alpha/Himax/Kconfig"
+endif

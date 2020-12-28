@@ -1,0 +1,8 @@
+config PM8008_LDO
+	bool "QPNP PM8008 PMIC Regulator Driver"
+	default y
+	---help---
+	  Say Y here to support the PM8008 PMIC chip.
+	  This driver controls PM8008 PMIC chip and the voltage
+	  regulators found in Qualcomm Technologies Inc. PM8008
+	  PMIC.

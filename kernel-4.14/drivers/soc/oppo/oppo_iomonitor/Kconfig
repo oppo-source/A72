@@ -1,0 +1,7 @@
+#ifdef VENDOR_EDIT
+#/* Hank.liu@TECH.PLAT.Storage, 2020-02-18, add oppo iomonitor driver*/
+config OPPO_IOMONITOR
+bool "config oppo iomonitor"
+help
+    define this config to init oppo iomonitor.
+#endif /* VENDOR_EDIT */

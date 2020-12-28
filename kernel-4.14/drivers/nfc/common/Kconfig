@@ -1,0 +1,6 @@
+config NFC_COMMON
+	bool "NFC Common Utils"
+	default y
+	---help---
+	  NFC Common Utils
+
